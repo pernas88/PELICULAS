@@ -1,0 +1,821 @@
+*:where( :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: "Roboto Condensed", sans-serif;
+
+
+    .layout-box {
+        max-inline-size: 1000px;
+        margin-inline: auto;
+    }
+
+    /* LOGO */
+    .logo:hover {
+        cursor: pointer;
+    }
+
+    /* HEADER MENU*/
+    .header {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        block-size: 150px;
+
+        .nav {
+            .menu {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                color: #ffffff;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border-bottom: 2px solid transparent;
+                    padding-block-end: 5px;
+                }
+
+                .item:hover {
+                    cursor: pointer;
+                    border-bottom: 2px solid #e0011a;
+                }
+
+                .separator {
+                    font-size: 14px;
+                    color: #737373;
+                }
+            }
+
+            /* HEADER TOOLS & SOCIAL MEDIA */
+            .social {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                justify-content: space-between;
+                fill: #ffffff;
+                cursor: pointer;
+            }
+        }
+
+        .tools {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            gap: 35px;
+            fill: #ffffff;
+            cursor: pointer;
+        }
+
+        .separator {
+            font-size: 25px;
+            color: #737373;
+            cursor: none;
+        }
+    }
+
+    /* MAIN */
+    .main {
+        .news {
+            position: relative;
+            display: flex;
+            gap: 30px;
+            padding-bottom: 150px;
+
+            .image {
+                width: 710px;
+                height: 550px;
+                object-fit: cover;
+            }
+
+            /* READ MORE*/
+            .data-title {
+                position: absolute;
+                background-color: black;
+                initial-letter: uppercase;
+                max-inline-size: 500px;
+                padding-block-start: 33px;
+                padding-inline-start: 60px;
+                right: 15px;
+                bottom: 150px;
+
+                .h2 {
+                    font-size: 37px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                .substitle {
+                    font-size: 14px;
+                    color: #ffffff;
+                    margin-block: 24px;
+                }
+
+                .button {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-block: 24px;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            /* RECENT NEWS*/
+            .aside {
+                .title {
+                    font-size: 16px;
+                    margin-block-end: 32px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                .red-line {
+                    content: "";
+                    display: block;
+                    background-color: red;
+                    height: 1px;
+                    width: 25px;
+                    position: relative;
+                    bottom: 43px;
+                    left: 130px;
+                    left: 115px;
+                }
+
+                .movie-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .item {
+                        display: flex;
+                        gap: 18px;
+                        cursor: pointer;
+
+                        .item-image {
+                            width: 82px;
+                            height: 68px;
+                        }
+
+                        .item-title {
+                            color: #ffffff;
+                            font-size: 15px;
+                            font-weight: bold;
+                        }
+
+                        .item-date {
+                            color: #ffffff;
+                            text-transform: uppercase;
+                            font-size: 11px;
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+        /* TABS: RECENT TRAILERS / MOST POPULAR / BEST SECTION */
+
+        .tabs {
+            background-color: lightgrey;
+
+            .box1 {
+                position: relative;
+                top: -200px;
+            }
+
+            .nav {
+                position: relative;
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    letter-spacing: 1px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    list-style-type: none;
+                    padding-top: 100px;
+                    padding-bottom: 40px;
+
+                }
+
+                .tab {
+                    font-size: 13px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                .separator {
+                    font-size: 13px;
+                    color: #737373;
+                }
+            }
+
+            /* PANEL 5 MOVIES */
+            .panel {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                .container {
+                    display: flex;
+                    gap: 20px;
+                    cursor: pointer;
+                }
+
+                .article {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .image {
+                    width: 100%;
+                    max-height: inherit;
+                    overflow: hidden;
+
+                }
+
+                .description {
+                    width: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    color: #ffffff;
+                    bottom: 20px;
+                }
+
+                .title {
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    list-style-type: none;
+                }
+
+                .type {
+                    font-size: 12px;
+                }
+            }
+
+            /* SLIDER NAV */
+            .slider {
+
+                .slider-nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    padding-top: 30px;
+                    cursor: pointer;
+
+                    .slider-nav-item {
+                        color: #737373;
+                        width: 30px;
+                        height: 50px;
+                    }
+                }
+            }
+
+        }
+
+        /* NEW RELEASES */
+        .new-releases {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .layout-box {
+                max-inline-size: 1000px;
+                margin-inline: auto;
+
+                .article {
+                    .data {
+                        background-color: white;
+                        inline-size: 50%;
+                        margin-inline-start: auto;
+
+                        .line {
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            width: 45px;
+                            background-color: red;
+                            position: relative;
+                            bottom: 25px;
+                        }
+
+                        .title {
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            font-size: 13px;
+                            color: grey;
+                        }
+
+                        .subtitle {
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            margin-top: 30px;
+                            font-size: 32px;
+                        }
+
+                        .titles {
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            margin-top: 30px;
+                            font-size: 13px;
+
+                            .gap {
+                                padding: 20px;
+                            }
+                        }
+
+                        .text {
+                            margin-top: 30px;
+                            font-size: 14px;
+                            color: #737373;
+                        }
+
+                        .buttons {
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin-top: 15px;
+                            cursor: pointer;
+
+                            .action-button {
+                                font-size: 12px;
+                                padding: 20px;
+
+                            }
+
+                            .more-info {
+                                color: #e0011a;
+                            }
+
+                            .gap {
+                                padding: 20px;
+                            }
+
+                            .svg {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    /* 4 MOVIES BANNER */
+    .backgroud-movies {
+        height: 650px;
+        overflow: hidden;
+    }
+
+    .movies {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .movie-article {
+        position: relative;
+
+        .image {
+            margin-bottom: -4px;
+            margin-top: 0px;
+            width: 25vw;
+            opacity: 0.6;
+        }
+
+        &:hover .data {
+            bottom: 40px;
+            gap: 50px;
+            transition: all;
+            transition-duration: 0.5s;
+            transition-delay: 0.2s;
+
+        }
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            position: absolute;
+            justify-content: space-between;
+            width: 200px;
+            bottom: 25px;
+            left: 5px;
+            gap: 10px;
+            cursor: pointer;
+            color: #ffffff;
+            bottom: -48px;
+
+            .floating-text {
+                .border-line {
+                    width: 40px;
+                    height: 2px;
+                    background-color: #f8b350;
+                    margin-left: 20px;
+                }
+
+                .title {
+                    text-transform: uppercase;
+                    font-size: 22.5px;
+                    padding-left: 20px;
+                    padding-top: 25px;
+                    white-space: nowrap;
+                }
+
+                .subtitle {
+                    font-size: 11px;
+                    padding: 20px;
+                    color: #ffffff;
+                    white-space: nowrap;
+                }
+
+                .buttons {
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    font-weight: bold;
+                    padding-left: 30px;
+                    white-space: nowrap;
+
+                    .action-button,
+                    .watch-trailer {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    /* FILM EXPERTS */
+    .experts {
+        display: flex;
+        align-items: center;
+        background: red;
+        text-align: center;
+        color: #ffffff;
+
+        .experts-container {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .image {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+            }
+
+            .svg {
+                fill: #ffffff;
+                width: 30px;
+                height: auto;
+                background-color: black;
+                border-radius: 50%;
+                margin-top: -25px;
+            }
+        }
+
+        .title {
+            font-size: 18px;
+            padding: 50px;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .category {
+            font-size: 12px;
+            margin-top: 9px;
+        }
+    }
+
+
+    /* LATEST NEWS */
+    .blog {
+        background-color: white;
+        position: relative;
+
+        .title {
+            font-size: 28px;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .line {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 45px;
+            background-color: red;
+            position: relative;
+            top: 70px;
+        }
+
+        .description {
+            font-size: 15px;
+            color: #737373;
+            margin-bottom: 50px;
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr repeat(2, 0.5fr);
+            grid-template-rows: repeat(2, 270px);
+            gap: 25px;
+            min-height: 600px;
+            padding-bottom: 150px;
+            cursor: pointer;
+
+            .blog-article {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &.article-1 {
+                    grid-row: 1 / 3;
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%,
+                            rgba(0, 0, 0, 0.5) 100%), url(pictures/padrehijatablet.jpg);
+
+                    .title {
+                        padding-top: 270px;
+                    }
+
+                    .subtitle {
+                        font-size: 37px;
+                    }
+
+                }
+
+                &.article-2 {
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%,
+                            rgba(0, 0, 0, 0.5) 100%), url(pictures/palomitas3d.jpg);
+
+                    .subtitle {
+                        font-size: 17px;
+                    }
+                }
+
+                &.article-3 {
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%,
+                            rgba(0, 0, 0, 0.5) 100%), url(pictures/hombregrabando.jpg);
+
+                    .subtitle {
+                        font-size: 17px;
+                    }
+                }
+
+                &.article-4 {
+                    grid-column: span 2;
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%,
+                            rgba(0, 0, 0, 0.5) 100%), url(pictures/familia3d.jpg);
+
+                    .title {
+                        padding-top: 50px;
+                    }
+
+                    .subtitle {
+                        font-size: 24px;
+                    }
+                }
+
+                .data {
+                    text-transform: uppercase;
+                    padding: 25px 30px;
+                    color: #ffffff;
+
+                    .title {
+                        font-size: 11px;
+                        font-weight: bold;
+                        color: #f8b350;
+                        text-transform: uppercase;
+                    }
+
+                    .subtitle {
+                        font-weight: bold;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                    }
+
+                    .info {
+                        margin-top: 20px;
+                        font-size: 11px;
+
+                        .date {
+                            text-transform: uppercase;
+                            font-size: 11px;
+                            color: #ffffff;
+                            padding-right: 20px;
+                        }
+
+                        .img-comment {
+                            width: 15px;
+                            height: 15px;
+                        }
+
+                        .comments {
+                            padding-right: 15px;
+                        }
+
+                        .img-likes {
+                            width: 15px;
+                            height: 15px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .browser-button {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #e0011a;
+        color: white;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        position: absolute;
+        bottom: 5%;
+        left: 43%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background-color: black;
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    .layout-box {
+        max-inline-size: 1000px;
+        margin-inline: auto;
+    }
+
+    .bottom-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: #ffffff;
+        list-style: none;
+
+        .logo {
+            .image {
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+
+            .copyright {
+                font-size: 14px;
+                color: #737373;
+            }
+        }
+
+        .menu {
+            .title {
+                text-transform: uppercase;
+                font-size: 16px;
+                margin-bottom: 20px;
+
+            }
+
+            .title::after {
+                content: "";
+                display: inline-block;
+                background-color: red;
+                height: 1px;
+                width: 25px;
+                position: relative;
+                right: 0;
+                left: 15px;
+                bottom: 4px;
+            }
+
+            .item {
+                font-size: 14px;
+                margin-bottom: 12px;
+                color: #737373;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .last-column {
+        .input {
+            width: 100%;
+            margin: 8px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid gray;
+            border-radius: 4px; 
+            width: 150px;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+
+        .footer-social {
+            display: flex;
+            margin-top: 35px;
+            gap: 5px;
+
+            .social-svg {
+                fill: white;
+                cursor: pointer;
+                border-radius: 50%;
+                padding: 5px;
+                width: 40px;
+                height: auto;
+            }
+
+            .svg-1 {
+                background-color: blue;
+            }
+
+            .svg-2 {
+                background-color: #000769;
+            }
+
+            .svg-3 {
+                background-color: palevioletred;
+            }
+
+            .svg-4 {
+                background-color: #e0011a;
+            }
+        }
+    }
+}
+
+/* RIGHT SIDE NAV */
+.buttons-right-nav {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0px 0px 51px 3px rgba(0, 0, 1, 0.2);
+    z-index: 2;
+    cursor: pointer;
+
+    .item {
+        width: 60px;
+        height: 60px;
+        background-color: #e0011a;
+        display: grid;
+        place-items: center;
+
+        .svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
